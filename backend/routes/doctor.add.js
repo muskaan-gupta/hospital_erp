@@ -4,7 +4,6 @@ const multer = require("multer");
 const NewDoctor = require("../models/doctor.add");
 
 const router = express.Router();
-
 const storage = multer.memoryStorage();
 const upload = multer({ storage });
 
@@ -46,6 +45,7 @@ router.post("/add", upload.single("file"), async (req, res) => {
     if (error.code === 11000) {
       return res.status(400).json({ error: "Email already exists." });
     }
+
     res.status(500).json({
       error: "An error occurred while adding the doctor.",
       details: error.message,
@@ -56,6 +56,7 @@ router.post("/add", upload.single("file"), async (req, res) => {
 router.get("/", async (req, res) => {
   try {
     const doctors = await NewDoctor.find();
+
     res.status(200).json(doctors);
   } catch (error) {
     res.status(500).json({
@@ -64,5 +65,71 @@ router.get("/", async (req, res) => {
     });
   }
 });
+router.put("/:id", upload.single("file"), async (req, res) => {
+  try {
+    const { id } = req.params;
+    const {
+      name,
+      age,
+      experience,
+      specialization,
+      dob,
+      email,
+      doctorDetails,
+      address,
+    } = req.body;
 
-module.exports = { router };
+    const doctor = await NewDoctor.findById(id);
+    if (!doctor) {
+      return res.status(404).json({ error: "Doctor not found." });
+    }
+
+    if (name) doctor.name = name;
+    if (age) doctor.age = age;
+    if (experience) doctor.experience = experience;
+    if (specialization) doctor.specialization = specialization;
+    if (dob) doctor.dob = dob;
+    if (email) doctor.email = email;
+    if (doctorDetails) doctor.doctorDetails = doctorDetails;
+    if (address) doctor.address = address;
+    if (req.file) {
+      doctor.file = req.file.buffer; // Update file if uploaded
+    }
+
+    const updatedDoctor = await doctor.save();
+
+    res.status(200).json({
+      message: "Doctor updated successfully.",
+      doctor: updatedDoctor,
+    });
+  } catch (error) {
+    res.status(500).json({
+      error: "An error occurred while updating the doctor.",
+      details: error.message,
+    });
+  }
+});
+
+router.delete("/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const doctor = await NewDoctor.findById(id);
+    if (!doctor) {
+      return res.status(404).json({ error: "Doctor not found." });
+    }
+
+    await doctor.deleteOne();
+
+    res.status(200).json({
+      message: "Doctor deleted successfully.",
+    });
+  } catch (error) {
+    res.status(500).json({
+      error: "An error occurred while deleting the doctor.",
+      details: error.message,
+    });
+  }
+});
+
+module.exports = router;

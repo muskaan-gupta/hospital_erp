@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 
-const NewPatients = new mongoose.Schema({
+const NewPatients = new mongoose.Schema(
+  {
   name: {
     type: String,
     required: true,
@@ -22,12 +23,14 @@ const NewPatients = new mongoose.Schema({
     unique: true
   },
   address: {
-    street: { type: String,  maxlength: 255, },
-    }
+      type: String,
+    },
+    file: {
+      type: Buffer,
+    },
   },
-  file: {
-    type: Buffer,
-  },
+  { timestamps: true }
 });
 
 module.exports = mongoose.model("patients.add", NewPatients);
+

@@ -22,4 +22,22 @@ router.post("/", async (req, res) => {
   }
 });
 
+router.get("/", async (req, res) => {
+  try {
+    const filters = req.query; // Example: { name: "John", age: "30" }
+    const patients = await Patient.find(filters);
+
+    res.status(200).json({
+      message: "Patient records retrieved successfully",
+      data: patients,
+    });
+  } catch (error) {
+    console.error("Error retrieving patient records:", error);
+    res.status(500).json({
+      message: "Failed to retrieve patient records",
+      error: error.message,
+    });
+  }
+});
+
 module.exports = { router };

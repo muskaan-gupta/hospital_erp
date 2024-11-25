@@ -1,18 +1,8 @@
 const mongoose = require("mongoose");
-
-const CounterSchema = new mongoose.Schema({
-  seqName: { type: String, required: true, unique: true },
-  seqValue: { type: Number, default: 101 },
-});
-
-const Counter = mongoose.model("Counter", CounterSchema);
+const { getNextSequence } = require("../counter");
 
 const PatientRecordSchema = new mongoose.Schema(
   {
-    patientId: {
-      type: String,
-      unique: true,
-    },
     patientName: {
       type: String,
       required: true,
@@ -58,25 +48,6 @@ const PatientRecordSchema = new mongoose.Schema(
   },
   { timestamps: true }
 );
-
-// Middleware to auto-generate ordered patientId
-PatientRecordSchema.pre("save", async function (next) {
-  if (!this.patientId) {
-    try {
-      const counter = await Counter.findOneAndUpdate(
-        { seqName: "patientId" },
-        { $inc: { seqValue: 1 } },
-        { new: true, upsert: true }
-      );
-
-      this.patientId = `PAT_${counter.seqValue}`;
-      next();
-    } catch (error) {
-      next(error);
-    }
-  } else {
-    next();
-  }
 });
 
 module.exports = mongoose.model("payment", PatientRecordSchema);

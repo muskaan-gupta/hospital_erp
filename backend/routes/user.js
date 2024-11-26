@@ -1,6 +1,8 @@
+const mongoose = require("mongoose");
 const express = require("express");
 const bcrypt = require("bcrypt");
 const User = require("../models/user");
+const { asynchandler } = require("../asynchandler");
 const router = express.Router();
 
 // Register a new user
@@ -80,4 +82,4 @@ router.post("/login", async (req, res) => {
   }
 });
 
-module.exports = { router };
+module.exports = router;

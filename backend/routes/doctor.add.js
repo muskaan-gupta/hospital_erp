@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const multer = require("multer");
 const NewDoctor = require("../models/doctor.add");
+const { asynchandler } = require("../asynchandler");
 
 const router = express.Router();
 const storage = multer.memoryStorage();

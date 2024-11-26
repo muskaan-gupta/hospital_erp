@@ -1,6 +1,6 @@
 const express = require("express");
 const Patient = require("../models/payment");
-
+const { asynchandler } = require("../asynchandler");
 const router = express.Router();
 
 router.post("/", async (req, res) => {
@@ -40,4 +40,4 @@ router.get("/", async (req, res) => {
   }
 });
 
-module.exports = { router };
+module.exports = router;

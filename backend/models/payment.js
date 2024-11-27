@@ -1,36 +1,56 @@
 const mongoose = require("mongoose");
-const bcrypt = require("bcrypt");
 
-const userschema = new mongoose.Schema(
+const PaymentRecordSchema = new mongoose.Schema(
   {
-    email: {
+    patientId: {
+      type: String,
+    },
+    patientName: {
       type: String,
       required: true,
-      unique: true,
-      lowercase: true,
+      trim: true,
     },
-    username: {
-      type: String,
-      unique: true,
-      minlength: 4,
-    },
-    password: {
+    department: {
       type: String,
       required: true,
-      minlength: 6, // Minimum password length
     },
-    confirmPassword: {
+    doctorName: {
       type: String,
       required: true,
-      validate: {
-        validator: function (value) {
-          return value === this.password;
-        },
-        message: "Passwords don't match",
-      },
+    },
+    admissionDate: {
+      type: Date,
+      required: true,
+    },
+    dischargeDate: {
+      type: Date,
+    },
+    serviceName: {
+      type: String,
+      required: true,
+    },
+    costOfTreatment: {
+      type: Number,
+      required: true,
+      min: 0,
+    },
+    discount: {
+      type: Number,
+      default: 0, // Default discount to 0%
+      min: 0,
+      max: 100,
+    },
+    advancePaid: {
+      type: Number,
+      default: 0,
+      min: 0,
+    },
+    cardOrCheckNo: {
+      type: String,
+      maxlenght: 15,
     },
   },
   { timestamps: true }
 );
 
-module.exports = mongoose.model("payment", userschema);
+module.exports = mongoose.model("payment", PaymentRecordSchema);

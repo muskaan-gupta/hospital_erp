@@ -54,7 +54,7 @@ router.post("/add", upload.single("file"), async (req, res) => {
   }
 });
 
-router.get("/", async (req, res) => {
+router.get("/doctor", async (req, res) => {
   try {
     const doctors = await NewDoctor.find();
 

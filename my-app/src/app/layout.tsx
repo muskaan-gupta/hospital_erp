@@ -18,8 +18,7 @@ export default function RootLayout({
 }: {
   children: ReactNode;
 }) {
- //  const { currentIndex, changeBackground, backgrounds } = useBackground();
- // className={`${backgrounds[currentIndex]} h-screen transition-colors duration-500` }
+  
   return (
     <html lang="en">
       <body  >
@@ -36,7 +35,7 @@ export default function RootLayout({
       >
         Change Background
       </button>   */}
-          <div className="bg-gray-100 ml-64 mt-16">
+          <div className="bg-gray-100 lg:ml-64 mt-16">
             {children}  
           </div>  
           </div>

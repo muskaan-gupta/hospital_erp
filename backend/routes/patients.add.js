@@ -8,7 +8,7 @@ const router = express.Router();
 const storage = multer.memoryStorage();
 const upload = multer({ storage });
 
-router.post("/addPatient", upload.single("file"), async (req, res) => {
+router.post("/addpatient", upload.single("file"), async (req, res) => {
   try {
     const { name, age, dob, email, address } = req.body;
 
@@ -44,7 +44,7 @@ router.post("/addPatient", upload.single("file"), async (req, res) => {
   }
 });
 
-router.get("/Patient", async (req, res) => {
+router.get("/getpatient", async (req, res) => {
   try {
     const patients = await NewPatients.find();
     res.status(200).json(patients);

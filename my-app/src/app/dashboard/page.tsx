@@ -9,8 +9,10 @@ import RecentPayments from '../../components/RecentPayments';
 
 export default function Dashboard() {
   return (
-    <div className="p-6 w-[80vw]">
-      <h1 className="text-3xl font-semibold">Dashboard</h1>
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100  w-[90vw] ">
+            <div className="w-full  bg-white shadow-md rounded-lg p-6">
+
+      <h1 className="text-3xl text-black font-semibold">Dashboard</h1>
       
       {/* Statistics Section */}
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mt-6">
@@ -36,6 +38,7 @@ export default function Dashboard() {
       <div className="mt-6">
         <RecentPayments />
       </div>
+    </div>
     </div>
   );
 }

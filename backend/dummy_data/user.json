@@ -1,0 +1,122 @@
+[
+  {
+    "email": "rahul.sharma@gmail.com",
+    "username": "rahul123",
+    "password": "securePass1",
+    "confirmPassword": "securePass1",
+    "createdAt": "2024-12-03T08:00:00.000Z",
+    "updatedAt": "2024-12-03T08:00:00.000Z"
+  },
+  {
+    "email": "ananya.verma@yahoo.com",
+    "username": "ananya456",
+    "password": "myPass456",
+    "confirmPassword": "myPass456",
+    "createdAt": "2024-12-03T08:00:00.000Z",
+    "updatedAt": "2024-12-03T08:00:00.000Z"
+  },
+  {
+    "email": "vivek.kumar@outlook.com",
+    "username": "vivek001",
+    "password": "passWord789",
+    "confirmPassword": "passWord789",
+    "createdAt": "2024-12-03T08:00:00.000Z",
+    "updatedAt": "2024-12-03T08:00:00.000Z"
+  },
+  {
+    "email": "priya.mehra@gmail.com",
+    "username": "priyaMehra",
+    "password": "Priya12345",
+    "confirmPassword": "Priya12345",
+    "createdAt": "2024-12-03T08:00:00.000Z",
+    "updatedAt": "2024-12-03T08:00:00.000Z"
+  },
+  {
+    "email": "aman.singh@rediffmail.com",
+    "username": "amanHero",
+    "password": "heroPass987",
+    "confirmPassword": "heroPass987",
+    "createdAt": "2024-12-03T08:00:00.000Z",
+    "updatedAt": "2024-12-03T08:00:00.000Z"
+  },
+  {
+    "email": "sneha.rai@gmail.com",
+    "username": "snehaRai",
+    "password": "password123",
+    "confirmPassword": "password123",
+    "createdAt": "2024-12-03T09:00:00.000Z",
+    "updatedAt": "2024-12-03T09:00:00.000Z"
+  },
+  {
+    "email": "deepak.mishra@yahoo.com",
+    "username": "deepakMish",
+    "password": "Deepak@456",
+    "confirmPassword": "Deepak@456",
+    "createdAt": "2024-12-03T09:00:00.000Z",
+    "updatedAt": "2024-12-03T09:00:00.000Z"
+  },
+  {
+    "email": "arjun.nair@outlook.com",
+    "username": "arjunNair",
+    "password": "NairPass789",
+    "confirmPassword": "NairPass789",
+    "createdAt": "2024-12-03T09:00:00.000Z",
+    "updatedAt": "2024-12-03T09:00:00.000Z"
+  },
+  {
+    "email": "isha.bansal@gmail.com",
+    "username": "ishaBansal",
+    "password": "Isha@321",
+    "confirmPassword": "Isha@321",
+    "createdAt": "2024-12-03T09:00:00.000Z",
+    "updatedAt": "2024-12-03T09:00:00.000Z"
+  },
+  {
+    "email": "rohit.shekhar@rediffmail.com",
+    "username": "rohitShekhar",
+    "password": "Rohit2024",
+    "confirmPassword": "Rohit2024",
+    "createdAt": "2024-12-03T09:00:00.000Z",
+    "updatedAt": "2024-12-03T09:00:00.000Z"
+  },
+  {
+    "email": "aarti.kapoor@gmail.com",
+    "username": "aartiKp",
+    "password": "aartiSecure",
+    "confirmPassword": "aartiSecure",
+    "createdAt": "2024-12-03T09:00:00.000Z",
+    "updatedAt": "2024-12-03T09:00:00.000Z"
+  },
+  {
+    "email": "gautam.pandey@gmail.com",
+    "username": "gautamP123",
+    "password": "gautam!123",
+    "confirmPassword": "gautam!123",
+    "createdAt": "2024-12-03T09:00:00.000Z",
+    "updatedAt": "2024-12-03T09:00:00.000Z"
+  },
+  {
+    "email": "meera.jain@yahoo.com",
+    "username": "meeraJain",
+    "password": "MeeraPass",
+    "confirmPassword": "MeeraPass",
+    "createdAt": "2024-12-03T09:00:00.000Z",
+    "updatedAt": "2024-12-03T09:00:00.000Z"
+  },
+  {
+    "email": "aditya.sen@outlook.com",
+    "username": "adiSen001",
+    "password": "Adi!Sen987",
+    "confirmPassword": "Adi!Sen987",
+    "createdAt": "2024-12-03T09:00:00.000Z",
+    "updatedAt": "2024-12-03T09:00:00.000Z"
+  },
+  {
+    "email": "kritika.kulkarni@gmail.com",
+    "username": "kritikaK",
+    "password": "kritika789",
+    "confirmPassword": "kritika789",
+    "createdAt": "2024-12-03T09:00:00.000Z",
+    "updatedAt": "2024-12-03T09:00:00.000Z"
+  }
+]

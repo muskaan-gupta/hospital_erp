@@ -2,13 +2,13 @@ const express = require("express");
 const mongoose = require("mongoose");
 const multer = require("multer");
 const NewPatients = require("../models/patients.add");
-
+const { asynchandler } = require("../asynchandler");
 const router = express.Router();
 
 const storage = multer.memoryStorage();
 const upload = multer({ storage });
 
-router.post("/add", upload.single("file"), async (req, res) => {
+router.post("/addpatient", upload.single("file"), async (req, res) => {
   try {
     const { name, age, dob, email, address } = req.body;
 
@@ -44,7 +44,7 @@ router.post("/add", upload.single("file"), async (req, res) => {
   }
 });
 
-router.get("/", async (req, res) => {
+router.get("/getpatient", async (req, res) => {
   try {
     const patients = await NewPatients.find();
     res.status(200).json(patients);
@@ -114,4 +114,4 @@ router.delete("/:id", async (req, res) => {
   }
 });
 
-module.exports = { router };
+module.exports = router;

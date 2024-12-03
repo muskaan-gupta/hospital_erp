@@ -33,21 +33,18 @@ const userschema = new mongoose.Schema(
   { timestamps: true }
 );
 
-const existedUser = await User.findOne({
-  $or: [{ username }, { email }],
-});
-console.log(existedUser);
-if (existedUser)
-  throw new ApiError(409, "User with email or username already exists");
+userschema.pre("save", async function (next) {
+  if (!this.isModified("password")) return next();
 
-UserSchema.pre("save", async function (next) {
-  if (this.isModified("password")) {
-    const salt = await bcrypt.genSalt(10);
-    this.password = await bcrypt.hash(this.password, salt);
-  }
-
-  this.confirmPassword = undefined;
+  this.password = await bcrypt.hash(this.password, 10);
   next();
 });
+
+userschema.methods.isPasswordCorrect = async function (password) {
+  console.log(password);
+  console.log(this.password);
+
+  return await bcrypt.compare(password, this.password);
+};
 
 module.exports = mongoose.model("user", userschema);

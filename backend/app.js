@@ -1,8 +1,3 @@
-import express from "express";
-import cors from "cors";
-
-import mongoose from "mongoose";
-import Appointment from "./models/Appointment";
 
 app.use(express.json({ limit: "20kb" }));
 app.use(express.urlencoded({ extended: true, limit: "20kb" }));
@@ -17,6 +12,13 @@ const Newdoctor = require("./routes/doctor.add");
 const User = require("./routes/user");
 const Payment = require("./routes/payment");
 const Appointment = require("./routes/Appointment");
+const express = require("express");
+const app = express();
+const cors = require("cors");
+const dotenv = require("dotenv");
+app.use(express.json());
+const mongoose = require("mongoose");
+
 
 app.use("/api/v1/users", Newdoctor);
 app.use("/api/v1/users", NewPatients);
@@ -30,4 +32,5 @@ app.listen(port, () => {
   console.log(`App is running at port ${port} !!`);
 });
 
-export { app };
+module.exports = app;
+

@@ -1,14 +1,19 @@
 const mongoose = require("mongoose");
-const { getNextSequence } = require("../counter");
+const getNextSequence = require("../counter");
 
-const PatientRecordSchema = new mongoose.Schema(
+const PaymentRecordSchema = new mongoose.Schema(
   {
+    patientId: {
+      type: String,
+    },
     patientName: {
       type: String,
       required: true,
+      trim: true,
     },
     department: {
       type: String,
+      required: true,
     },
     doctorName: {
       type: String,
@@ -39,15 +44,16 @@ const PatientRecordSchema = new mongoose.Schema(
     advancePaid: {
       type: Number,
       required: true,
+      default: 0,
       min: 0,
     },
     cardOrCheckNo: {
       type: String,
       maxLength: 100,
+      maxlenght: 15,
     },
   },
   { timestamps: true }
 );
-});
 
-module.exports = mongoose.model("payment", PatientRecordSchema);
+module.exports = mongoose.model("payment", PaymentRecordSchema);

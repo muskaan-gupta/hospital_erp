@@ -1,0 +1,167 @@
+[
+  {
+    "name": "Dr. Ramesh Iyer",
+    "age": 45,
+    "experience": 20,
+    "specialization": "Cardiology",
+    "dob": "1979-03-15",
+    "email": "ramesh.iyer@gmail.com",
+    "doctorDetails": "Dr. Ramesh specializes in treating heart-related ailments and has authored several research papers in cardiology.",
+    "address": "12 Green Lane, Mumbai",
+    "file": null
+  },
+  {
+    "name": "Dr. Anjali Sharma",
+    "age": 38,
+    "experience": 12,
+    "specialization": "Pediatrics",
+    "dob": "1986-07-24",
+    "email": "anjali.sharma@gmail.com",
+    "doctorDetails": "Dr. Anjali has extensive experience in child healthcare and is a consultant for multiple hospitals.",
+    "address": "45 Rosewood Avenue, Delhi",
+    "file": null
+  },
+  {
+    "name": "Dr. Vikram Kapoor",
+    "age": 50,
+    "experience": 25,
+    "specialization": "Orthopedics",
+    "dob": "1974-11-30",
+    "email": "vikram.kapoor@gmail.com",
+    "doctorDetails": "Dr. Vikram is known for his expertise in bone and joint surgeries.",
+    "address": "90 Maple Road, Jaipur",
+    "file": null
+  },
+  {
+    "name": "Dr. Sneha Verma",
+    "age": 33,
+    "experience": 8,
+    "specialization": "Dermatology",
+    "dob": "1991-02-19",
+    "email": "sneha.verma@gmail.com",
+    "doctorDetails": "Dr. Sneha specializes in skincare and cosmetic dermatology.",
+    "address": "22 Pearl Street, Lucknow",
+    "file": null
+  },
+  {
+    "name": "Dr. Rajat Mishra",
+    "age": 42,
+    "experience": 18,
+    "specialization": "Neurology",
+    "dob": "1982-09-11",
+    "email": "rajat.mishra@gmail.com",
+    "doctorDetails": "Dr. Rajat is a leading neurologist with expertise in treating nervous system disorders.",
+    "address": "78 Crescent Road, Pune",
+    "file": null
+  },
+  {
+    "name": "Dr. Priya Menon",
+    "age": 35,
+    "experience": 10,
+    "specialization": "Gastroenterology",
+    "dob": "1989-05-27",
+    "email": "priya.menon@gmail.com",
+    "doctorDetails": "Dr. Priya has significant expertise in digestive system disorders.",
+    "address": "35 Ocean View, Chennai",
+    "file": null
+  },
+  {
+    "name": "Dr. Karan Gupta",
+    "age": 47,
+    "experience": 22,
+    "specialization": "Oncology",
+    "dob": "1977-01-05",
+    "email": "karan.gupta@gmail.com",
+    "doctorDetails": "Dr. Karan is a senior oncologist with specialization in cancer treatment.",
+    "address": "14 Horizon Plaza, Hyderabad",
+    "file": null
+  },
+  {
+    "name": "Dr. Meera Joshi",
+    "age": 40,
+    "experience": 15,
+    "specialization": "Psychiatry",
+    "dob": "1984-08-13",
+    "email": "meera.joshi@gmail.com",
+    "doctorDetails": "Dr. Meera focuses on mental health and behavioral disorders.",
+    "address": "21 Lotus Lane, Bangalore",
+    "file": null
+  },
+  {
+    "name": "Dr. Aditya Singh",
+    "age": 36,
+    "experience": 11,
+    "specialization": "Ophthalmology",
+    "dob": "1988-06-21",
+    "email": "aditya.singh@gmail.com",
+    "doctorDetails": "Dr. Aditya is a specialist in eye care and corrective surgeries.",
+    "address": "50 Spring Grove, Kolkata",
+    "file": null
+  },
+  {
+    "name": "Dr. Isha Chawla",
+    "age": 30,
+    "experience": 6,
+    "specialization": "ENT",
+    "dob": "1994-12-14",
+    "email": "isha.chawla@gmail.com",
+    "doctorDetails": "Dr. Isha focuses on ear, nose, and throat disorders.",
+    "address": "34 Sunset Boulevard, Ahmedabad",
+    "file": null
+  },
+  {
+    "name": "Dr. Rohit Nair",
+    "age": 41,
+    "experience": 17,
+    "specialization": "Urology",
+    "dob": "1983-10-04",
+    "email": "rohit.nair@gmail.com",
+    "doctorDetails": "Dr. Rohit is experienced in urinary tract and male reproductive system treatments.",
+    "address": "18 Serenity Drive, Coimbatore",
+    "file": null
+  },
+  {
+    "name": "Dr. Tanya Roy",
+    "age": 29,
+    "experience": 5,
+    "specialization": "Gynecology",
+    "dob": "1995-01-09",
+    "email": "tanya.roy@gmail.com",
+    "doctorDetails": "Dr. Tanya is passionate about women's health and pregnancy care.",
+    "address": "88 River Valley, Patna",
+    "file": null
+  },
+  {
+    "name": "Dr. Rajeev Bansal",
+    "age": 48,
+    "experience": 23,
+    "specialization": "Nephrology",
+    "dob": "1976-02-23",
+    "email": "rajeev.bansal@gmail.com",
+    "doctorDetails": "Dr. Rajeev is a leading expert in kidney-related disorders.",
+    "address": "67 Skyline Road, Chandigarh",
+    "file": null
+  },
+  {
+    "name": "Dr. Pooja Jain",
+    "age": 34,
+    "experience": 9,
+    "specialization": "Endocrinology",
+    "dob": "1990-07-17",
+    "email": "pooja.jain@gmail.com",
+    "doctorDetails": "Dr. Pooja focuses on hormonal and metabolic disorders.",
+    "address": "15 City Square, Ranchi",
+    "file": null
+  },
+  {
+    "name": "Dr. Tarun Desai",
+    "age": 43,
+    "experience": 19,
+    "specialization": "Pulmonology",
+    "dob": "1981-03-18",
+    "email": "tarun.desai@gmail.com",
+    "doctorDetails": "Dr. Tarun is known for treating respiratory system disorders.",
+    "address": "74 Golden Oaks, Surat",
+    "file": null
+  }
+]

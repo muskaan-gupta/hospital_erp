@@ -1,43 +1,64 @@
 const express = require("express");
-const Patient = require("../models/payment");
-
+const Payment = require("../models/payment");
+const { getNextSequence } = require("../counter");
+const { asynchandler } = require("../asynchandler");
 const router = express.Router();
 
-router.post("/", async (req, res) => {
+router.post("/addpayment", async (req, res) => {
   try {
-    const newPatient = new Patient(req.body);
-    const savedPatient = await newPatient.save(); // Middleware will generate patientId
+    const {
+      patientId,
+      patientName,
+      department,
+      doctorName,
+      admissionDate,
+      dischargeDate,
+      serviceName,
+      costOfTreatment,
+      discount,
+      advancePaid,
+      cardOrCheckNo,
+    } = req.body;
+    const newPayment = new Payment({
+      patientId,
+      patientName,
+      department,
+      doctorName,
+      admissionDate,
+      dischargeDate,
+      serviceName,
+      costOfTreatment,
+      discount,
+      advancePaid,
+      cardOrCheckNo,
+    });
 
-    // Return the saved patient
+    const savedPayment = await newPayment.save();
+
     res.status(201).json({
-      message: "Patient record created successfully",
-      data: savedPatient,
+      message: "Appointment created successfully.",
+      appointment: savedAppointment,
     });
   } catch (error) {
-    console.error("Error creating patient record:", error);
+    console.error("Error creating appointment:", error);
     res.status(500).json({
-      message: "Failed to create patient record",
+      message: "Failed to create appointment.",
       error: error.message,
     });
   }
 });
 
-router.get("/", async (req, res) => {
+router.get("/Pay", async (req, res) => {
   try {
-    const filters = req.query; // Example: { name: "John", age: "30" }
-    const patients = await Patient.find(filters);
-
-    res.status(200).json({
-      message: "Patient records retrieved successfully",
-      data: patients,
-    });
+    const payments = await Payment.find();
+    res.status(200).json(payments);
   } catch (error) {
-    console.error("Error retrieving patient records:", error);
+    console.error("Error fetching payments:", error);
     res.status(500).json({
-      message: "Failed to retrieve patient records",
+      message: "Failed to fetch payments.",
       error: error.message,
     });
   }
 });
 
-module.exports = { router };
+module.exports = router;

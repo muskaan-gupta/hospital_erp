@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const multer = require("multer");
 const NewDoctor = require("../models/doctor.add");
+const { asynchandler } = require("../asynchandler");
 
 const router = express.Router();
 const storage = multer.memoryStorage();
@@ -53,7 +54,7 @@ router.post("/add", upload.single("file"), async (req, res) => {
   }
 });
 
-router.get("/", async (req, res) => {
+router.get("/doctor", async (req, res) => {
   try {
     const doctors = await NewDoctor.find();
 

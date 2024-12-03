@@ -1,9 +1,10 @@
 const express = require("express");
 const Appointment = require("../models/Appointment");
 const { getNextSequence } = require("../counter");
+const { asynchandler } = require("../asynchandler");
 const router = express.Router();
 
-router.post("/", async (req, res) => {
+router.post("/appointment", async (req, res) => {
   try {
     const { department, doctorName, appointmentDate, timeSlot, problem } =
       req.body;
@@ -34,7 +35,7 @@ router.post("/", async (req, res) => {
   }
 });
 
-router.get("/", async (req, res) => {
+router.get("/getAppoint", async (req, res) => {
   try {
     const appointments = await Appointment.find();
     res.status(200).json(appointments);
